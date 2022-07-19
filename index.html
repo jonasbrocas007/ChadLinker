@@ -1,0 +1,44 @@
+<html>
+  <title>Chad Linker</title>
+  <h1>Chad Linker</h1>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+  <link rel="stylesheet" href="stylesheet.css">
+
+  <ul id="myUL">
+    <li><a href="https://www.youtube.com/c/Hamza97">Hamza Ahmed (chad on life) </a></li> 
+    <li><a href="https://www.youtube.com/c/TateSpeech">Andrew Tate (chad on life)</a></li>
+    <li><a href="https://www.youtube.com/c/LukeSmithxyz">Luke Smith (chad on technology)</a></li>
+    <li><a href="https://www.youtube.com/c/MarkTilbury">Mark Tilbury (chad on entrepreneurship)</a></li> 
+    <li> <a href="https://www.youtube.com/channel/UCN82PyCCd7DS7MAFa9d6jHg">jonasbrocas (supreme chad on everything)</a></li> 
+    <li><a href="https://www.youtube.com/user/WhatifAltHist">Noel Deyzel (Chad on bodybuilding)</a></li>
+    <li><a href="https://www.youtube.com/c/EconomicsExplained">Economics Explained (chad on economics)</a></li>
+    <li><a href="https://www.youtube.com/c/KrautandTea">Kraut (Chad on history)</a></li>
+    <li><a href="https://www.youtube.com/c/inanutshell">In a Nutshell (Chad on science)</a></li>
+    <li><a href="https://www.youtube.com/c/MentalOutlaw/featured">Mental Outlaw (Chad on technology)</a></li>
+    <li><a href="https://davidgoggins.com/">David Goggins (Chad on life)</a></li>
+    <li><a href="https://www.youtube.com/c/hard2hurt">Hard2Hurt (Chad on fighting)</a></li>
+  
+  </ul>
+</html>
+<script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('myInput');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName('li');
+    
+      // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        }
+        else{
+            li[i].style.display = "none";
+        }
+      }
+    }
+</script>
